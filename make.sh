@@ -8,7 +8,7 @@ wget http://archive.ubuntu.com/ubuntu/dists/bionic-updates/main/installer-i386/c
 wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18.04.5-base-i386.tar.gz
 
 #Step4: Download linux modules installer package according to linux Kernel version and linux distribution version from its official website.
-wget http://mirrors.kernel.org/ubuntu/pool/main/l/linux/linux-modules-4.15.0-112-generic_4.15.0-112.113_amd64.deb
+wget http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux-modules-4.15.0-112-generic_4.15.0-112.113_i386.deb
 
 #Step5: Make initramfs image!
 install -Dm0755 busybox-x86_64 initramfs/bin/busybox
