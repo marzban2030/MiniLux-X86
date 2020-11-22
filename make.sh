@@ -11,7 +11,7 @@ wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18
 wget http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux-modules-4.15.0-112-generic_4.15.0-112.113_i386.deb
 
 #Step5: Make initramfs image!
-install -Dm0755 busybox-x86_64 initramfs/bin/busybox
+install -Dm0755 busybox-i686 initramfs/bin/busybox
 install -Dm0755 init.sh initramfs/init
 cp rootfs.sh initramfs/
 cd initramfs
@@ -21,7 +21,7 @@ cd ..
 #Step6: Make rootfs on hard.img image file (for virtual machines). Increase hard disk image size by changing 1G to 2G and more at last command.
 mkdir ubunturootfs
 tar -xf *ubuntu*base*.tar.gz -C ubunturootfs
-install -Dm0755 busybox-x86_64 ubunturootfs/bin/busybox
+install -Dm0755 busybox-i686 ubunturootfs/bin/busybox
 cp *.deb ubunturootfs/root/
 cp mod.sh ubunturootfs/
 cp config.sh ubunturootfs/
